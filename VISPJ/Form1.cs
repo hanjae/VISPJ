@@ -71,7 +71,7 @@ namespace VISPJ
                         using (myStream)
                         {
                             Image theImage = Image.FromStream(myStream);
-                            OpenObject objForm = new OpenObject();
+                            OpenObject objForm = new OpenObject(this);
                             objForm.setImage(theImage);
                             objForm.ShowDialog();
                             //this.pictureBox2.Image = Image.FromStream(myStream);
@@ -105,6 +105,10 @@ namespace VISPJ
             
         }
 
+        public void setObjectPicture(Image theImage)
+        {
+            this.pictureBox2.Image = theImage;
+        }
 
 
 

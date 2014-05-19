@@ -12,8 +12,10 @@ namespace VISPJ
 {
     public partial class OpenObject : Form
     {
-        public OpenObject()
+        private Form1 callerForm = null;
+        public OpenObject(Form1 theForm)
         {
+            callerForm = theForm;
             InitializeComponent();
         }
         public void setImage(Image theImage)
@@ -29,6 +31,10 @@ namespace VISPJ
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (callerForm != null)
+            {
+                callerForm.setObjectPicture(this.pictureBox1.Image);
+            }
             this.Close();
         }
     }
