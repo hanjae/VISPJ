@@ -43,7 +43,7 @@ namespace VISPJ
                         {
                             this.pictureBox1.Image = this.img1 = Image.FromStream(myStream);
                             this.Size = new Size(this.pictureBox1.Image.Width + 200, this.pictureBox1.Image.Height + 200);
-                            myStream.Close();                  
+                            myStream.Close();
                         }
                     }
                 }
@@ -70,7 +70,11 @@ namespace VISPJ
                     {
                         using (myStream)
                         {
-                            this.pictureBox2.Image = Image.FromStream(myStream);
+                            Image theImage = Image.FromStream(myStream);
+                            OpenObject objForm = new OpenObject();
+                            objForm.setImage(theImage);
+                            objForm.ShowDialog();
+                            //this.pictureBox2.Image = Image.FromStream(myStream);
                             myStream.Close();
 
                         }
