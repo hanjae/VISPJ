@@ -14,7 +14,7 @@ namespace VISPJ
 
     public partial class result : Form
     {
-        public const String dirpath = @"D:\image";
+        public const String dirpath = @"C:\image";
         private String[] files;
         Image img;
         List<double> approx_result;

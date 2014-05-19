@@ -29,7 +29,7 @@ namespace VISPJ
         {
             Stream myStream = null;
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
-            openFileDialog1.InitialDirectory = "c:\\";
+            //openFileDialog1.InitialDirectory = "c:\\";
             openFileDialog1.Filter = "jpg files (*.jpg)|*.jpg|png files (*.png)|*.png|All files (*.*)|*.*";
             openFileDialog1.FilterIndex = 1;
             openFileDialog1.RestoreDirectory = true;
@@ -58,9 +58,9 @@ namespace VISPJ
         {
             Stream myStream = null;
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
-            openFileDialog1.InitialDirectory = "c:\\";
+            //openFileDialog1.InitialDirectory = "c:\\";
             openFileDialog1.Filter = "jpg files (*.jpg)|*.jpg|png files (*.png)|*.png|All files (*.*)|*.*";
-            openFileDialog1.FilterIndex = 2;
+            openFileDialog1.FilterIndex = 1;
             openFileDialog1.RestoreDirectory = true;
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
