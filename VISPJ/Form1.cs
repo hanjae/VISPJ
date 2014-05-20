@@ -107,7 +107,9 @@ namespace VISPJ
 
         public void setObjectPicture(Image theImage)
         {
-            this.pictureBox2.Image = theImage;
+            Bitmap bitmapImage = new Bitmap(theImage);
+            bitmapImage.MakeTransparent(Color.Purple);
+            this.pictureBox2.Image = bitmapImage;
         }
 
 
